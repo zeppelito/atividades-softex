@@ -1,0 +1,33 @@
+def calc(a,b,opcao):
+
+    if opcao == 1:
+        print(f'\nResultado: {a+b}')
+    elif opcao == 2:
+        print(f'\nResultado: {a-b}')
+    elif opcao == 3:
+        print(f'\nResultado: {a*b}')
+    else:
+        print(f'\nResultado: {a/b}')
+
+
+opcao = 1
+
+#Programa
+while opcao:
+    print('\nEscolha a operação que deseja realizar:')
+    print('1: Soma')
+    print('2: Subtração')
+    print('3: Multiplicação')
+    print('4: Divisão')
+    print('0: Sair')
+    opcao = int(input('\nOpção: '))
+    if opcao == 0:
+        print('\nAté breve!')
+        exit()
+    elif 1 <= opcao <= 4:
+        a = float(input('Digite o primeiro valor: '))
+        b = float(input('Digite o segundo valor: '))
+
+        calc(a, b, opcao)
+    else:
+        print('\nEssa opção não existe')
