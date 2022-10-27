@@ -1,0 +1,22 @@
+def manipulacao_string(op, nome):
+    if op == 1:
+        print(nome.upper())
+    elif op == 2:
+        print(nome.lower())
+    elif op == 3:
+        print(len(nome))
+    elif op == 4:
+        print("Maiúscula:", nome.upper())
+        print("Minúscula:", nome.lower())
+        print("Quantidade de caracteres:", len(nome))
+
+
+nome = input("Digite alguma Frase: ")
+op = int(input("[1]Para Maiúscula\n[2]Para Minúscula\n[3]Para Contar Caracteres inseridos\n[4]Todas Opções\n"))
+manipulacao_string(op, nome)
+
+if v1 == 0:
+    c3.off(c3.ligar)
+elif v1 == 1:
+    c3.on(c3.ligar)
+print(c3.qtd_controle, "Controle Cadastrados\n")
