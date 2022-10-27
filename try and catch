@@ -1,0 +1,19 @@
+
+import java.util.Scanner;
+
+public class tRyCatch {
+  public static void main(String[] args) {
+    Scanner s = new Scanner(System.in);
+    try {
+      System.out.print("Digite o primeiro valor completo : ");
+      int numero1 = s.nextInt();
+      System.out.print("Digite o segundo valor completo : ");
+      int numero2 = s.nextInt();
+
+      System.out.println(numero1 + "+" + numero2 + "=" + (numero1 + numero2));
+    } catch (Exception ex) {
+      System.out.println("Erro - Valor digitado não corresponde a um número inteiro!");
+    }
+
+  }
+}
