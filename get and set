@@ -1,0 +1,41 @@
+class sala de aula:
+
+    def __init__(self, mesa, cadeira):
+        self.cadeira = cadeira
+        self.mesa = mesa
+
+    def set_estante(self, ad_cadeira):
+        self.cadeira += ad_cadeira
+
+    def set_livro(self, ad_mesa):
+        self.mesa += ad_mesa
+
+    def imprimir(self):
+        print(self.mesa, self.cadeira)
+
+    def get_mesa(self):
+        return self.mesa
+
+    def get_cadeira(self):
+        return self.cadeira
+
+
+b1 = sala_de_aula(0, 0.0)
+
+v1 = 4
+while (v1 != 0):
+
+    v1 = float(input("Deseja adicionar mais um lugar para sentar?\n[0]Não\n[1]Sim\n"))
+    if v1 == 1:
+        b1.set_mesa(float(input("Quantas mesas deseja adicionar na sua sala? ")))
+        print("Quantidade de mesas:", b1.get_mesa())
+        if b1.get_mesa() > 10:
+            b1.set_estante(b1.get_livro()/10)
+            print("Quantidade de cadeiras:", b1.get_cadeira())
+
+    elif (v1 == 0):
+        print("Sua quantidade de mesa é:", b1.get_mesa(), "\nSua quantidade de cadeiras é:", b1.get_cadeiras())
+        break
+
+    else:
+        print("Digite 1/0")
